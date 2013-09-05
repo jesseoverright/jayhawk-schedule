@@ -14,7 +14,7 @@ class Schedule_model extends CI_Model {
 			foreach ($query->result() as $game) {
 				$game->result = $this->get_result($game->score, $game->opponent_score);
 				$game->time = $this->convert_time_to_display($game->time);
-				$game->formatted_date = $this->convert_date_to_display($game->date);
+				$game->formatted_date = $this->convert_date_to_display($game->date, TRUE);
 			}
 
 			return $query->result();
@@ -91,9 +91,9 @@ class Schedule_model extends CI_Model {
 		return date("g:i A", strtotime($db_time));
 	}
 
-	private function convert_date_to_display($db_date) {
-		//return date("D, M jS", strtotime($db_date));
-		return date("l, F jS Y",strtotime($db_date));
+	private function convert_date_to_display($db_date, $short = FALSE) {
+		if ($short) return date("D, M jS",strtotime($db_date));
+		else return date("l, F jS Y",strtotime($db_date));
 	}
 
 }

@@ -1,13 +1,17 @@
 <h2>Edit <?php echo $game->opponent; ?> Game</h2>
 
 <?php echo validation_errors(); ?>
+<?php if (isset($upload_errors)) echo $upload_errors; ?>
 
-<?php echo form_open('schedule/game/'.$game->slug.'/edit/'); ?>
+<?php echo form_open_multipart('schedule/game/'.$game->slug.'/edit/'); ?>
 	<label for="opponent">Opponent</label>
 	<input type="text" name="opponent" id="opponent" value="<?php echo $game->opponent; ?>"/><br />
 
 	<label for="mascot">Mascot</label>
 	<input type="text" name="mascot" id="mascot" value="<?php echo $game->mascot; ?>"/><br />
+
+	<label for="userfile">Logo</label>
+	<input type="file" name="userfile" id="logo" size="20" /><br />
 
 	<label for="location">Location</label>
 	<input type="text" name="location" id="location" value="<?php echo $game->location; ?>" /><br />

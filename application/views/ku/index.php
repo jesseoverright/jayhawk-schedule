@@ -7,6 +7,6 @@
 			</h2>
 		<?php endif; ?>
 		<h2><a href="/schedule/game/<?php echo $game->slug; ?>"><?php echo $game->opponent.' '.$game->mascot; ?></a>	</h2>
-		<p><span class="game-type"><?php echo $game->type; ?></span><?php echo $game->time; ?> <?php echo $game->formatted_date;?></p>
+		<p><span class="game-type"><?php echo $game->type; ?></span><?php echo $game->formatted_date;?> <?php echo $game->time; ?></p>
 	</div>
 <?php endforeach ?>
