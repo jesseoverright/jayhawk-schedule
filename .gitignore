@@ -9,3 +9,6 @@
 */logs/!index.html
 */cache/*
 */cache/!index.html
+
+#don't store database info
+*/application/config/database.php
