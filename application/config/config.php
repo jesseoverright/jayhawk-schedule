@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= $_SERVER['DOCUMENT_ROOT'];
+$config['base_url']	= $_SERVER['HTTP_HOST'];
 
 /*
 |--------------------------------------------------------------------------
