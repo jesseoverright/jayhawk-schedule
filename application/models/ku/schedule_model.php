@@ -45,6 +45,7 @@ class Schedule_model extends CI_Model {
 			'date' => $this->input->post('date'),
 			'time' => $this->convert_time_to_db($this->input->post('time')),
 			'location' => $this->input->post('location'),
+			'television' => $this->input->post('television'),
 			'type' => $this->input->post('type')
 		);
 
@@ -69,6 +70,7 @@ class Schedule_model extends CI_Model {
 			'mascot' => $this->input->post('mascot'),
 			'slug' => $slug,
 			'location' => $this->input->post('location'),
+			'television' => $this->input->post('television'),
 			'date' => $this->input->post('date'),
 			'time' => $this->convert_time_to_db($this->input->post('time')),
 			'type' => $this->input->post('type')

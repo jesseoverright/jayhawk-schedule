@@ -16,6 +16,9 @@
 	<label for="date">Date</label>
 	<input type="text" name="date" id="date" /> <input type="text" name="time" id="time" value="8:00 PM" /><br />
 
+	<label for="television">Television</label>
+	<input type="text" name="television" id="television" /><br />
+
 	<label for="type">Game Type</label>
 	<input type="radio" name="type" value="Conference"> Conference<br />
 	<input type="radio" name="type" value="Non-Conference"> Non-Conference<br />
