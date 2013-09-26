@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://codeigniter.dev';
+$config['base_url']	= $_SERVER['DOCUMENT_ROOT'];
 
 /*
 |--------------------------------------------------------------------------
