@@ -1,3 +1,11 @@
 # OS generated files #
 .DS_Store
 */.DS_Store
+
+# codeigniter cleanup #
+*/user_guide/*
+*/config/development
+*/logs/log-*.php
+*/logs/!index.html
+*/cache/*
+*/cache/!index.html
