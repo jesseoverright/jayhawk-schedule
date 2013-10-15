@@ -15,6 +15,15 @@ class Schedule extends CI_Controller {
 		$this->load->view('templates/ku-footer');
 	}
 
+	public function ical() {
+		$data['ku_games'] = $this->schedule_model->get_games();
+		$data['title'] = 'Kansas Jayhawks 2013-14 Schedule';
+
+		$this->load->view('templates/ical-header', $data);
+		$this->load->view('ku/ical');
+		$this->load->view('templates/ical-footer');
+	}
+
 	public function game($slug) {
 		$data['game'] = $this->schedule_model->get_games($slug);
 		$data['title'] = "Kansas Jayhawks vs ".$data['game']->opponent;

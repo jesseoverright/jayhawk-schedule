@@ -41,6 +41,7 @@
 $route['schedule/game/create'] = 'ku/schedule/create';
 $route['schedule/game/(:any)/edit'] = 'ku/schedule/edit/$1';
 $route['schedule/game/(:any)'] = 'ku/schedule/game/$1';
+$route['schedule/ical'] = 'ku/schedule/ical';
 $route['schedule'] = 'ku/schedule';
 
 # from codeigniter demo
