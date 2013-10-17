@@ -1,1 +1,0 @@
-<p>This is a tutorial for CodeIgniter, in action!</p>

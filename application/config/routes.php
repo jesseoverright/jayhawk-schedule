@@ -38,20 +38,13 @@
 |
 */
 
-$route['schedule/game/create'] = 'ku/schedule/create';
-$route['schedule/game/(:any)/edit'] = 'ku/schedule/edit/$1';
-$route['schedule/game/(:any)'] = 'ku/schedule/game/$1';
-$route['schedule/ical'] = 'ku/schedule/ical';
-$route['schedule'] = 'ku/schedule';
+$route['schedule/game/create'] = 'ku_schedule/create';
+$route['schedule/game/(:any)/edit'] = 'ku_schedule/edit/$1';
+$route['schedule/game/(:any)'] = 'ku_schedule/game/$1';
+$route['schedule/ical'] = 'ku_schedule/ical';
+$route['schedule'] = 'ku_schedule';
 
-# from codeigniter demo
-$route['news/create'] = 'news/create';
-$route['news/(:any)'] = 'news/view/$1';
-$route['news'] = 'news';
-
-$route['(:any)'] = 'pages/view/$1';
-#$route['default_controller'] = 'pages/view';
-$route['default_controller'] = 'ku/schedule';
+$route['default_controller'] = 'ku_schedule';
 $route['404_override'] = '';
 
 
