@@ -3,10 +3,10 @@
     foreach ($ku_games as $game) { 
 
         if ($game->location == "Allen Fieldhouse, Lawrence, KS") {
-            $summary = "{$game->opponent} {$game->mascot} at Kansas Jayhawks";
+            $summary = "{$game->opponent} {$game->mascot} at KU";
         }
         else {
-            $summary = "Kansas Jayhawks vs {$game->opponent} {$game->mascot}";
+            $summary = "KU vs {$game->opponent} {$game->mascot}";
         }
         
         $events .= 'BEGIN:VEVENT
