@@ -77,6 +77,10 @@ h1, h2, h3, h4, p {
 	clear: both;
 }
 
+.game p {
+	line-height: 1.65em;
+}
+
 .game .game-type {
 	background-color: #ddd;
 	padding: 5px 8px;
