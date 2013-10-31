@@ -1,12 +1,17 @@
 <?php 
     $events = "";
-    foreach ($ku_games as $game) { 
+    foreach ($ku_games as $game) {
+        if ($game->result) {
+            $summary = ucfirst($game->result[0]).' '.$game->score.' - '.$game->opponent_score.' ';
+        } else {
+            $summary = '';
+        }
 
         if ($game->location == "Allen Fieldhouse, Lawrence, KS") {
-            $summary = "{$game->opponent} {$game->mascot} at KU";
+            $summary .= "{$game->opponent} {$game->mascot} at KU";
         }
         else {
-            $summary = "KU vs {$game->opponent} {$game->mascot}";
+            $summary .= "KU vs {$game->opponent} {$game->mascot}";
         }
         
         $events .= 'BEGIN:VEVENT
@@ -20,7 +25,7 @@ SUMMARY:'.$summary.'
 DESCRIPTION:Broadcast on '.$game->television.'
 X-ALT-DESC;FMTTYPE=text/html:<p>Broadcast on '.$game->television.'</p>
 LOCATION:'.$game->location.'
-URL:http://54.200.23.89/schedule/game/'.$game->slug.'
+URL:http://jayhawkschedule.co/schedule/game/'.$game->slug.'
 CLASS:PUBLIC
 STATUS:CONFIRMED
 END:VEVENT
