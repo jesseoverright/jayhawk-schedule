@@ -43,6 +43,7 @@ $route['schedule/game/(:any)/edit'] = 'ku_schedule/edit/$1';
 $route['schedule/game/(:any)'] = 'ku_schedule/game/$1';
 $route['schedule/ical'] = 'ku_schedule/ical';
 $route['schedule'] = 'ku_schedule';
+$route['login'] = 'login';
 
 $route['default_controller'] = 'ku_schedule';
 $route['404_override'] = '';

@@ -1,9 +1,11 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
 class KU_Schedule extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->model('ku_schedule_model');
 		#$this->output->enable_profiler(TRUE);
+		
 	}
 
 	public function index() {
@@ -34,6 +36,14 @@ class KU_Schedule extends CI_Controller {
 	}
 
 	public function edit($slug) {
+		# authenticate user login
+		$this->load->helper('url');
+		
+		session_start();
+		if ( !isset($_SESSION['username']) ) {
+			redirect('login');
+		}
+
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 
@@ -59,6 +69,14 @@ class KU_Schedule extends CI_Controller {
 	}
 
 	public function create() {
+		# authenticate user login
+		$this->load->helper('url');
+		
+		session_start();
+		if ( !isset($_SESSION['username']) ) {
+			redirect('login');
+		}
+
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 
