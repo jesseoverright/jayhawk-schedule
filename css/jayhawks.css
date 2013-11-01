@@ -150,7 +150,7 @@ form label[for="type"] {
 	height: 7em;
 }
 
-form input[type="text"] {
+form input[type="text"], form input[type="password"] {
 	font-size: 100%;
 	margin: 0 0 0.5em;
 	width: 20em;
@@ -158,4 +158,11 @@ form input[type="text"] {
 
 form #score, form #opponent_score {
 	width: 2em;
+}
+
+.errors {
+	border: 2px dotted red;
+	padding: 5px 5px 0;
+	background-color: #eee;
+	margin-bottom: 10px;
 }
