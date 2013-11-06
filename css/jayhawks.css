@@ -194,6 +194,10 @@ form #score, form #opponent_score {
 		width: 90%;
 	}
 
+	#header h1 {
+		text-shadow: 3px 3px #000;
+	}
+
 	.game {
 		margin-bottom: 15px;
 		padding-bottom: 15px;
